@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--Metadata para PWA-->
+    <!--Modificar color de barra de estado para ANDROID-->
+    <meta name="theme-color" content="#41b883" />
+    <!--Optimizaciones de SEO-->
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandHeldFriendly" content="true" />
+    <!--Modificar barra de estado IOS-->
+    <meta name="apple-mobile-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent" />
+    <!--Iconos-->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png"/>
+    <link rel="apple-touch-icon" href="./img/favicon.png"/>
+    <link rel="apple-touch-startup-image" href="./img/favicon.png"/>
+
+    <!--Manifest-->
+    <link rel="manifest" href="manifest.json"/>
+    <!-- Hojas de estilos -->
+    <title>Contador App</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}}</h1>
+        <hr>
+        <h3 class="count">{{count}}</h3>
+        <hr>
+        <button v-on:click="modCount('dis')">-1</button>
+        <button @click="modCount('')">+1</button>
+    </div>
+    <script src="./load.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mountApp.js"></script>
+</body>
+</html>
